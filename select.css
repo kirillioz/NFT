@@ -1,0 +1,58 @@
+select {
+    appearance: none;
+    outline: 0;
+    box-shadow: 0;
+    border: 0!important;
+    background-image: none; 
+    background: linear-gradient(45deg, #c6b4f7, #eaafc8);
+    background-size: 200% 200%;
+    /* background: rgb(203 148 215); */
+    border-radius: .25em;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    cursor: pointer;
+    flex: 1;
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* @keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+} */
+
+.select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: rgb(203 148 215);
+    border-radius: 1.25em;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+
+.select:hover::after {
+    color: rgb(203 148 215);
+}
